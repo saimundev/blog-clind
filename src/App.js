@@ -1,20 +1,22 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Home from "./pages/home/Home";
-import Navber from "./pages/share/navber/Navber";
+import { lazy,Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
-import CreateBlog from "./pages/blog/createBlog/CreateBlog";
-import Detailes from "./pages/home/detailes/Detailes";
-import Reguster from "./pages/auth/reguster/Reguster";
-import Login from "./pages/auth/login/Login";
-import EmailSend from "./pages/auth/emailSend/EmailSend";
-import ForgetPassword from "./pages/auth/forgetPassword/ForgetPassword";
+import { ChakraProvider } from "@chakra-ui/react";
+import Navber from "./pages/share/navber/Navber";
 import PrivateRoute from "./pages/auth/provateRoute/PrivateRoute";
-import Profile from "./pages/profile/Profile";
-import Edit from "./pages/profile/edit/Edit";
-import Content from "./pages/profile/content/Content";
-import UpdateBlog from "./pages/blog/updateBlog/UpdateBlog";
 import Footer from "./pages/share/footer/Footer";
+const Home = lazy(()=>import("./pages/home/Home"))
+const CreateBlog = lazy(()=>import("./pages/blog/createBlog/CreateBlog"))
+const Detailes = lazy(()=>import("./pages/home/detailes/Detailes"))
+const Reguster = lazy(()=>import("./pages/auth/reguster/Reguster"))
+const Login = lazy(()=>import("./pages/auth/login/Login"))
+const Profile = lazy(()=>import("./pages/profile/Profile"))
+const Edit = lazy(()=>import("./pages/profile/edit/Edit"))
+const Content = lazy(()=>import("./pages/profile/content/Content"))
+const UpdateBlog = lazy(()=>import("./pages/blog/updateBlog/UpdateBlog"))
+const EmailSend = lazy(()=>import("./pages/auth/emailSend/EmailSend"))
+const ForgetPassword = lazy(()=>import("./pages/auth/forgetPassword/ForgetPassword"))
+
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
       <Router>
         <Navber />
         <Toaster />
+        <Suspense fallback={<h1>Loding...</h1>}>
         <Routes>
+         
           <Route path="/" element={<Home />} />
           <Route path="/reguster" element={<Reguster />} />
           <Route path="/login" element={<Login />} />
@@ -34,7 +38,9 @@ function App() {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/content/:id" element={<Content />} />
           <Route path="/update-blog/:id" element={<UpdateBlog  />} />
+         
         </Routes>
+        </Suspense>
         <Footer />
       </Router>
     </ChakraProvider>

@@ -36,7 +36,7 @@ const ProfileInfo = () => {
       <Card p="10px" pos="relative">
         <Image 
           mt="20px"
-          src={`https://blog-website-czn0.onrender.com/${data?.profile}`}
+          src={`https://blog-website-59ns.onrender.com/${data?.profile}`}
           height="500px"
           objectFit="cover"
         />

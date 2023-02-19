@@ -22,7 +22,7 @@ const Cart = ({ item,isLoading }) => {
         <Image
             w="500px"
             h="290px"
-            src={`https://blog-website-czn0.onrender.com/${image}`}
+            src={`https://blog-website-59ns.onrender.com/${image}`}
             objectFit="cover"
           />
           <CardBody>

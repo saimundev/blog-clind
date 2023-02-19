@@ -78,7 +78,7 @@ const Edit = () => {
         <CardBody>
         <Heading size="lg" textAlign="center" mt="20px" mb="20px">Update User</Heading>
        <Box textAlign="center" mb="20px">
-       <Avatar src={ profile ? URL.createObjectURL(profile) : `https://blog-website-czn0.onrender.com/${data?.profile}`} size="lg" />
+       <Avatar src={ profile ? URL.createObjectURL(profile) : `https://blog-website-59ns.onrender.com/${data?.profile}`} size="lg" />
        </Box>
       <form onSubmit={handleSubmit}>
         <Input

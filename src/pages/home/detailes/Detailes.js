@@ -118,7 +118,7 @@ const Detailes = () => {
             h="350px"
             objectFit="cover"
             my="20px"
-            src={`https://blog-website-czn0.onrender.com/${data?.image}`}
+            src={`https://blog-website-59ns.onrender.com/${data?.image}`}
           />
           <CardBody>
             <Text textAlign="justify">
@@ -199,7 +199,7 @@ const Detailes = () => {
                   <Box>
                     <Stack direction="row" gap="6px" align="center">
                       <Avatar
-                        src={`https://blog-website-czn0.onrender.com/${comment.postedBy.profile} `}
+                        src={`https://blog-website-59ns.onrender.com/${comment.postedBy.profile} `}
                       />
                       <Text
                         fontSize="18px"

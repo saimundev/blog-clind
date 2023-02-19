@@ -170,7 +170,7 @@ const Navber = () => {
                     <Avatar
                     border="2px solid lightgray"
                     name={auth?.user?.name}
-                    src={`https://blog-website-czn0.onrender.com/${data?.profile}`}
+                    src={`https://blog-website-59ns.onrender.com/${data?.profile}`}
                     
                   />
                   </MenuButton>

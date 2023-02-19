@@ -61,7 +61,7 @@ const Blog = ({ item }) => {
           <Image
             w={{base:"full",md:"500px",lg:"500px"}}
             h="350px"
-            src={`https://blog-website-czn0.onrender.com/${image}`}
+            src={`https://blog-website-59ns.onrender.com/${image}`}
             objectFit="cover"
           />
           <CardBody>

@@ -4,7 +4,7 @@ export const blogApi = createApi({
   reducerPath: "blogApi",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://blog-website-czn0.onrender.com/",
+    baseUrl: "https://blog-website-59ns.onrender.com/",
     prepareHeaders: (headers, { getState }) => {
       const redusers = getState();
       const token = redusers?.auth?.auth?.token;
